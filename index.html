@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariston Caragay - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/logos/logo.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+        transition: padding-top 0.3s ease;
+        }
+
+        .navbar-collapse.show + body {
+        padding-top: 200px; /* Adjust this height based on the navbar content height */
+        }
+        .navbar {
+        background-color: #343a40;
+        z-index: 1000; /* Ensure the navbar is above other content */
+        }
+        .navbar a {
+            color: #ffffff !important;
+        }
+        .profile-header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 70px;
+            border-top: 4px solid #002244;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 120px; 
+            height: 120px;
+            border: 2px solid #ffffff;
+            background-color: white;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .card {
+            flex: 0 1 auto;
+            min-width: 250px;
+            max-width: 300px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        /* Card Background Colors */
+        .card:nth-child(1) {
+            background-color: #e0f7fa; /* Light Cyan */
+        }
+        .card:nth-child(2) {
+            background-color: #ffe0b2; /* Light Orange */
+        }
+        .card:nth-child(3) {
+            background-color: #f1f8e9; /* Light Green */
+        }
+
+        /* Card Hover Effect */
+        .card:hover {
+            transform: scale(1.05);
+            opacity: 0.9; /* Optional: slightly fade on hover */
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #003366; /* Themed color for headings */
+        }
+        .card-text {
+            color: #555555; /* Dark gray for better readability */
+        }
+        .skill-card {
+            background-color: #ffffff; /* Default background */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Service Card Background Colors */
+        .skill-card:nth-child(1) {
+            background-color: #e0f7fa; /* Light Cyan */
+        }
+        .skill-card:nth-child(2) {
+            background-color: #ffe0b2; /* Light Orange */
+        }
+        .skill-card:nth-child(3) {
+            background-color: #f1f8e9; /* Light Green */
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            opacity: 0.9; /* Optional: slightly fade on hover */
+        }
+        .skill-card h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .skill-card p {
+            color: #555555;
+            transition: color 0.3s;
+        }
+        .skill-card:hover p {
+            color: #003366; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="Logo" style="border-radius: 50%;" height="40"> ARC
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="fas fa-user"></i> About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Profile Header -->
+<section class="profile-header">
+    <div class="container">
+        <img id="profileImage" src="assets/1711953983402.jpg" alt="Ariston Caragay">
+        <h2>Ariston Caragay</h2>
+        <p><i class="fas fa-laptop-code"></i> Web Developer | UX/UI Designer</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container my-5">
+    <h3 class="text-center" style="color: #003366;">About Me</h3>
+    <div class="text-center mb-4">
+        <p><i class="fas fa-hand-wave"></i> 👋 Hello! I'm Ariston Caragay, a passionate web developer and UX/UI designer committed to crafting intuitive and visually appealing digital experiences. I thrive on solving complex problems through innovative design and effective coding.</p>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <h5 style="color: #003366;"><i class="fas fa-rocket"></i> My Journey</h5>
+            <p>My fascination with technology began early, leading me to explore web development and design. With a solid foundation in HTML, CSS, and JavaScript, I focus on creating responsive and accessible web applications that enhance user experience. Each project I undertake not only sharpens my technical skills but also deepens my understanding of user-centric design.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <h5 style="color: #003366;"><i class="fas fa-heart"></i> What I Love</h5>
+            <p>Outside of coding, I enjoy binge-watching Kdramas, experimenting with new recipes, and exploring nature. I believe that maintaining a balance between work and hobbies is essential for nurturing creativity, which ultimately reflects in my work as a designer.</p>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <h5 style="color: #003366;"><i class="fas fa-comments"></i> Let’s Connect!</h5>
+        <p>I love collaborating with others and exchanging ideas. Whether you're looking to work together on a project or just want to chat about design and development, feel free to reach out!</p>
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+    </div>
+</section>
+
+
+<!-- Services Offered Section -->
+<section id="services" class="container my-5">
+    <h3 class="text-center" style="color: #003366;">Services Offered</h3>
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-code"></i> Web Development</h5>
+                <p>Building responsive and user-friendly websites tailored to your needs.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-server"></i> Backend Development</h5>
+                <p>Creating robust server-side applications with Node.js and Express.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-paint-brush"></i> UI/UX Design</h5>
+                <p>Designing intuitive interfaces that enhance user experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- My Skills Section -->
+<section id="skills" class="container my-5">
+    <h3 class="text-center" style="color: #003366;">My Skills</h3>
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-code"></i> Web Development</h5>
+                <p>HTML, CSS, JavaScript, Bootstrap</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-server"></i> Backend Technologies</h5>
+                <p>Node.js, Express, SQLite, Monngo Db and more</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-code-branch"></i> Version Control</h5>
+                <p>Git, GitHub</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-paint-brush"></i> UI/UX Design</h5>
+                <p>Responsive Design, User-Centered Design</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-lightbulb"></i> Problem Solving</h5>
+                <p>Analytical Thinking, Creative Solutions</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-users"></i> Team Collaboration</h5>
+                <p>Communication, Leadership, Teamwork</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container my-5">
+    <h3 class="text-center" style="color: #003366;">My Projects</h3>
+    <div class="row text-center">
+        <!-- Project 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="assets/cargo/cargo.png" class="card-img-top" alt="Project 1" style="width: 100%; height: auto; max-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-laptop"></i> CarGo</h5>
+                    <p class="card-text">A car rental management system that simplifies the rental process.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">View Project</a>
+                </div>
+            </div>
+        </div>
+        <!-- Project 1 Modal -->
+        <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="project1ModalLabel">Car Rental Management System</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: left;">
+                        <!-- Carousel for Project 1 -->
+                        <div id="carouselProject1" class="carousel slide mb-3" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/cargo/1.png" class="d-block w-100" alt="Project 1 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/cargo/2.png" class="d-block w-100" alt="Project 1 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/cargo/3.png" class="d-block w-100" alt="Project 1 Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <h6>Features:</h6>
+                        <ul>
+                            <li>Easy-to-use interface for managing rental reservations</li>
+                            <li>Customer database with real-time updates</li>
+                            <li>Vehicle management including availability status</li>
+                            <li>Payment integration for seamless transactions</li>
+                            <li>Admin dashboard for managing users, vehicles, and reservations</li>
+                        </ul>                        
+                        <p>This system simplifies the car rental process by automating booking, scheduling, and payments, making it easier for businesses to manage fleet availability and customer interactions.</p>
+                        <h6>How it works?</h6>
+                        <p>CarGo streamlines the car rental process through a simple and efficient workflow. Here's how it works:</p>
+                        <ol style="text-align: left;">
+                            <li><strong>Create an Account:</strong> Users first need to sign up and create an account by providing their personal details and a valid driver's license.</li>
+                            <li><strong>Browse Available Vehicles:</strong> After logging in, users can browse through a list of available vehicles based on their location, dates, and preferences such as car type or brand.</li>
+                            <li><strong>Make a Reservation:</strong> Once a vehicle is selected, users can book it by specifying the rental duration and pickup/drop-off locations. The system checks vehicle availability in real time.</li>
+                            <li><strong>Process Payment:</strong> Users can complete the booking by making a payment through the integrated payment gateway. Payment options include credit cards, debit cards, and digital wallets.</li>
+                            <li><strong>Pick Up the Vehicle:</strong> After the reservation is confirmed, users receive a pickup confirmation with details on the vehicle's location and time.</li>
+                            <li><strong>Return the Vehicle:</strong> At the end of the rental period, users return the vehicle to the specified location. The system automatically updates the vehicle's availability and closes the transaction.</li>
+                            <li><strong>Manage Bookings:</strong> Users can view, modify, or cancel upcoming bookings through their dashboard, while businesses can monitor vehicle status, reservations, and customer data in real time through the admin dashboard.</li>
+                        </ol>
+                        <p>CarGo makes it easy for both customers and businesses to handle the car rental process, ensuring a smooth experience from booking to vehicle return.</p>
+                    </div>
+                    <p>Interested in this project? Contact me on Facebook: <a href="https://www.facebook.com/aristonroblescaragay" target="_blank">Aris Robles</a></p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="assets/kraze/kraze.png"  class="card-img-top" alt="Project 2" style="width: 100%; height: auto; max-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-video"></i> Kraze</h5>
+                    <p class="card-text">A Kdrama recommender system for enthusiasts to discover new shows.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">View Project</a>
+                </div>
+            </div>
+        </div>
+        <!-- Project 2 Modal -->
+        <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="project2ModalLabel">Kdrama Recommender System</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: left;">
+                        <!-- Carousel for Project 2 -->
+                        <div id="carouselProject2" class="carousel slide mb-3" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/kraze/1.png" class="d-block w-100" alt="Project 2 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/kraze/2.png" class="d-block w-100" alt="Project 2 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/kraze/3.png" class="d-block w-100" alt="Project 2 Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/kraze/4.png" class="d-block w-100" alt="Project 2 Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <h6>Features:</h6>
+                        <ul>
+                            <li>Personalized recommendations based on user preferences</li>
+                            <li>Extensive Kdrama library with detailed descriptions</li>
+                            <li>User ratings and reviews</li>
+                            <li>Filter by genre, release year, and popularity</li>
+                            <li>Admin dashboard for managing dramas, users, and reviews</li>
+                        </ul>                        
+                        <p>This system helps Kdrama enthusiasts discover new shows by offering personalized recommendations and an extensive library of dramas with easy search and filter functionality.</p>
+                        <h6>How it works?</h6>
+                        <p>Kraze provides an intuitive experience for users to discover their next favorite Kdrama. Here’s how it works:</p>
+                        <ol style="text-align: left;">
+                            <li><strong>Create an Account:</strong> Users sign up by providing their email and a password to create an account, which allows them to save preferences and ratings.</li>
+                            <li><strong>Register Preferences:</strong> After logging in, users can input their favorite genres, actors, and shows to help the system tailor recommendations.</li>
+                            <li><strong>Explore the Library:</strong> Users can browse the extensive Kdrama library, which includes detailed descriptions, ratings, and reviews for each show.</li>
+                            <li><strong>Receive Recommendations:</strong> Based on user preferences and past ratings, Kraze generates personalized recommendations, making it easy to find new shows to watch.</li>
+                            <li><strong>Filter Results:</strong> Users can filter the Kdrama listings by genre, release year, and popularity to quickly find shows that interest them.</li>
+                            <li><strong>Admin Features:</strong> Admins can manage the Kdrama library, user accounts, and reviews through an admin dashboard, ensuring the content is up-to-date and relevant.</li>
+                        </ol>
+                        <p>Kraze aims to enhance the Kdrama viewing experience by making it easier for enthusiasts to discover and enjoy new content tailored to their tastes.</p>
+                    </div>
+                    <p>Interested in this project? Contact me on Facebook: <a href="https://www.facebook.com/aristonroblescaragay" target="_blank">Aris Robles</a></p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 (PetConnect) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="assets/petconnect/petconnect.png" class="card-img-top" alt="PetConnect" style="width: 100%; height: auto; max-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-book"></i> PetConnect</h5>
+                    <p class="card-text">An online platform for pet adoption and management.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">View Project</a>
+                </div>
+            </div>
+        </div>
+        <!-- Project 3 Modal -->
+        <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="project3ModalLabel" style="text-align: left;">PetConnect Platform</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="text-align: left;">
+                        <!-- Carousel for Project 3 -->
+                        <div id="carouselProject3" class="carousel slide mb-3" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/petconnect/1.png" class="d-block w-100" alt="Project 3 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/petconnect/2.png" class="d-block w-100" alt="Project 3 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/petconnect/3.png" class="d-block w-100" alt="Project 3 Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <h6 style="text-align: left;">Features:</h6>
+                        <ul style="text-align: left;">
+                            <li>Comprehensive pet adoption and management system</li>
+                            <li>User-friendly interface for potential pet owners and adopters</li>
+                            <li>Advanced search and filter options</li>
+                            <li>Adding to favorites for users</li>
+                            <li>Admin dashboard for managing pets, users, and adoption records</li>
+                        </ul>
+                        <p style="text-align: left;">PetConnect aims to streamline the pet adoption process, connecting potential adopters with pets in need of homes while providing shelters with tools to manage their resources effectively.</p>
+                        <h6>How it works?</h6>
+                        <p>PetConnect is designed to simplify the pet adoption process for users. Here’s how it works:</p>
+                        <ol style="text-align: left;">
+                            <li><strong>Create an Account:</strong> Users sign up on the platform by providing their details to create an account. This allows them to save favorite pets and manage their adoption inquiries.</li>
+                            <li><strong>Register Pet Preferences:</strong> Users can specify their preferences, such as pet type, breed, and age, to receive tailored recommendations.</li>
+                            <li><strong>Browse Available Pets:</strong> Users can explore a comprehensive listing of pets available for adoption, complete with detailed profiles and images.</li>
+                            <li><strong>Add to Favorites:</strong> Users can mark pets they are interested in as favorites for easy reference later.</li>
+                            <li><strong>Contact Shelters:</strong> When a user finds a pet they wish to adopt, they can easily contact the associated animal shelter through the platform for further information and to initiate the adoption process.</li>
+                            <li><strong>Admin Features:</strong> Admin can manage their pet listings and user inquiries through an admin dashboard, streamlining the management of adoption records and resources.</li>
+                        </ol>
+                        <p>PetConnect strives to create a seamless and efficient experience for both potential pet owners and shelters, fostering connections that lead to successful adoptions.</p>
+                    </div>
+                    <p>Interested in this project? Contact me on Facebook: <a href="https://www.facebook.com/aristonroblescaragay" target="_blank">Aris Robles</a></p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 (FoundMate) -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card">
+        <img src="assets/foundmate/1.png" class="card-img-top" alt="FoundMate" style="width: 100%; height: auto; max-height: 200px;">
+        <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> FoundMate</h5>
+            <p class="card-text">A lost and found platform for university campuses.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project4Modal">View Project</a>
+        </div>
+    </div>
+</div>
+<!-- Project 4 Modal -->
+<div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project4ModalLabel" style="text-align: left;">FoundMate Platform</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+                <!-- Carousel for Project 4 -->
+                <div id="carouselProject4" class="carousel slide mb-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/foundmate/2.png" class="d-block w-100" alt="Project 4 Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/foundmate/3.png" class="d-block w-100" alt="Project 4 Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/foundmate/4.png" class="d-block w-100" alt="Project 4 Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/foundmate/5.png" class="d-block w-100" alt="Project 4 Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/foundmate/6.png" class="d-block w-100" alt="Project 4 Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/foundmate/7.png" class="d-block w-100" alt="Project 4 Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject4" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject4" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <h6 style="text-align: left;">Features:</h6>
+                <ul style="text-align: left;">
+                    <li>Dedicated lost and found platform for university campuses</li>
+                    <li>Real-time updates on found items and reports of lost belongings</li>
+                    <li>Advanced search and filter options by location and date</li>
+                    <li>User-friendly interface for reporting lost items</li>
+                    <li>Admin dashboard for managing reports and overseeing platform activity</li>
+                </ul>
+                <p style="text-align: left;">FoundMate helps university students and staff efficiently report and locate lost items on campus, with real-time updates and an easy-to-use interface.</p>
+                <h6>How it works?</h6>
+                <p>Using FoundMate is simple and intuitive. Follow these steps:</p>
+                <ol style="text-align: left;">
+                    <li><strong>Register Your Student ID:</strong> Although students have accounts by default, the first step is to register your student ID to activate the account. This ensures your identity is verified within the platform.</li>
+                    <li><strong>Report Lost Items:</strong> If you've lost something, log in, click on the 'Report Lost Item' button, and provide details such as item description, location, and date.</li>
+                    <li><strong>Search for Found Items:</strong> Browse or search for items reported as found. Use filters like location, date, and category to easily find your lost belongings.</li>
+                    <li><strong>Claim Found Items:</strong> If you find your lost item in the 'Found Items' section, click on the listing and follow the steps to claim it and arrange a pickup.</li>
+                    <li><strong>Receive Notifications:</strong> Get real-time alerts when items matching your description are found or reported.</li>
+                    <li><strong>Admin Interface:</strong> Admin can view and manage lost and found reports, ensuring smooth platform operation.</li>
+                </ol>
+                <p>FoundMate simplifies the lost and found process on campus, offering a seamless experience for students and staff to recover lost belongings.</p> 
+            </div>
+            <p>Interested in this project? Contact me on Facebook: <a href="https://www.facebook.com/aristonroblescaragay" target="_blank">Aris Robles</a></p>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<!-- Additional Services Section -->
+<section id="additional-services" class="container my-5">
+    <h3 class="text-center" style="color: #003366;">Additional Services</h3>
+    <div class="row text-center">
+        <!-- Academic Writing Services -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-book"></i> Research Papers</h5>
+                <p>Professional assistance in writing and formatting research papers to meet academic standards.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-pencil-alt"></i> Essays</h5>
+                <p>Custom-written essays covering a wide range of topics for academic purposes.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-file-alt"></i> Reaction & Reflection Papers</h5>
+                <p>High-quality reaction and reflection papers to help you express critical thoughts and perspectives.</p>
+            </div>
+        </div>
+
+        <!-- Presentation and Creative Services -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-video"></i> Video & Photo Editing</h5>
+                <p>High-quality editing services for videos and photos to enhance your visual content.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-file-powerpoint"></i> PowerPoint Presentations</h5>
+                <p>Professional and engaging PowerPoint presentations tailored for your needs.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-pencil-alt"></i> Article Writing</h5>
+                <p>Expert article writing services tailored for academic and professional needs.</p>
+            </div>
+        </div>
+
+        <!-- Editing, Proofreading & Consultation Services -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-comments"></i> Editing & Proofreading</h5>
+                <p>Thorough editing and proofreading services to ensure your work is error-free and polished.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="skill-card">
+                <h5 style="color: #003366;"><i class="fas fa-lightbulb"></i> Consultation Services</h5>
+                <p>Guidance on academic writing and research strategies to enhance your work.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h3 class="text-center" style="color: #003366;">Contact Me</h3>
+    <div class="text-center">
+        <p><i class="fas fa-phone"></i> Phone: +63 966 448 7480</p>
+        <p><i class="fas fa-envelope"></i> Email: arisrobles07@gmail.com </p>
+        <p><i class="fas fa-map-marker-alt"></i> Location: Mangatarem, Pangasinan Philippines</p>
+        <div class="mt-4">
+            <h5 style="color: #003366;">Follow Me</h5>
+            <a href="https://www.linkedin.com/in/arisrobles_c" class="btn btn-outline-primary m-1" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/arisrobles_c" class="btn btn-outline-dark m-1" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://facebook.com/aristonroblescaragay" class="btn btn-outline-info m-1" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/en.aris" class="btn btn-outline-danger m-1" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ariston Caragay. I'm excited working with you!</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+
+<script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarNav');
+    const body = document.body;
+    
+    navbarToggler.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        // When collapsing, remove padding
+        body.style.paddingTop = '0';
+      } else {
+        // When expanding, add padding
+        body.style.paddingTop = '200px'; // Adjust this value based on the menu height
+      }
+    });
+  
+    // Optional: Adjust the padding when the menu is closed via clicking a link
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+      body.style.paddingTop = '0';
+    });
+  
+    navbarCollapse.addEventListener('shown.bs.collapse', () => {
+      body.style.paddingTop = '200px'; // Adjust this value based on the menu height
+    });
+  </script>
+  
+  
+</body>
+</html>
